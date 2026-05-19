@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp"> <TextView
+        android:id="@+id/tvAdminStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Режим: Клієнт"
+        android:textColor="#6C757D"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnAdminLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вхід (Адмін)"
+            android:backgroundTint="#212529"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сортування: "
+        android:textSize="14sp"
+        android:textColor="#495057"/>
+
+        <Button
+            android:id="@+id/btnSortPrice"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="За ціною ↕"
+            android:textColor="#0D6EFD"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvRooms"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E9ECEF"
+        android:dividerHeight="8dp"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/btnAddRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Додати новий номер"
+        android:backgroundTint="#198754"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone" />
+</LinearLayout>
