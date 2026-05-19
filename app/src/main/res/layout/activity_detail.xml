@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvFormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Картка номера готелю"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#212529"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Номер кімнати"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#212529" />
+        <EditText
+            android:id="@+id/etRoomNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:hint="Введіть номер кімнати"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            android:textColor="#212529"
+            android:textColorHint="#6C757D"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ціна за ніч ($)"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#212529" />
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:hint="Введіть ціну за ніч"
+            android:inputType="numberDecimal"
+            android:importantForAutofill="no"
+            android:textColor="#212529"
+            android:textColorHint="#6C757D"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Максимальна кількість гостей"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#212529" />
+        <EditText
+            android:id="@+id/etMaxGuests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:hint="Введіть кількість гостей"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            android:textColor="#212529"
+            android:textColorHint="#6C757D"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тип номера"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#212529"
+            android:layout_marginBottom="6dp" />
+        <Spinner
+            android:id="@+id/spinnerRoomType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:contentDescription="Вибір типу номера"
+            android:layout_marginBottom="20dp" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Номер вільний для заселення"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212529"
+            android:checked="true"
+            android:layout_marginBottom="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <LinearLayout
+                android:id="@+id/layoutClientBooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Кількість ночей для проживання"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#212529" />
+
+                <EditText
+                    android:id="@+id/etNights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:padding="12dp"
+                    android:hint="Введіть кількість ночей"
+                    android:inputType="number"
+                    android:importantForAutofill="no"
+                    android:textColor="#212529"
+                    android:textColorHint="#6C757D"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Разом до сплати: 0.00 $"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#198754"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Забронювати цей номер"
+                android:backgroundTint="#198754"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Зберегти зміни"
+                android:backgroundTint="#0D6EFD"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Видалити номер"
+                android:backgroundTint="#DC3545"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
